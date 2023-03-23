@@ -6,11 +6,24 @@
 # Datatypes (KEYWORD1)
 ##################################################
 
+GNSS_easyC	KEYWORD1
+
 ##################################################
 # Methods and Functions (KEYWORD2)
 ##################################################
 
 begin	KEYWORD2
+getLatitude	KEYWORD2
+getLongitude	KEYWORD2
+getYear	KEYWORD2
+getMonth	KEYWORD2
+getDay	KEYWORD2
+getHour	KEYWORD2
+getMinute	KEYWORD2
+getSeconds	KEYWORD2
+getSpeed	KEYWORD2
+getAltitude	KEYWORD2
+
 
 ##################################################
 # Constants (LITERAL1)
