@@ -29,7 +29,7 @@ void GNSS_easyC::initializeNative()
 
 /**
  * @brief                   Get the last measured latitude by the GPS module
- * 
+ *
  * @returns                 float value of the latitude
  */
 float GNSS_easyC::getLatitude()
@@ -43,7 +43,7 @@ float GNSS_easyC::getLatitude()
 
 /**
  * @brief                   Get the last measured longitude by the GPS module
- * 
+ *
  * @returns                 float value of the longitude
  */
 float GNSS_easyC::getLongitude()
@@ -57,7 +57,7 @@ float GNSS_easyC::getLongitude()
 
 /**
  * @brief                   Get the last measured year by the GPS module
- * 
+ *
  * @returns                 uint16_t value of the year
  */
 uint16_t GNSS_easyC::getYear()
@@ -72,7 +72,7 @@ uint16_t GNSS_easyC::getYear()
 
 /**
  * @brief                   Get the last measured month by the GPS module
- * 
+ *
  * @returns                 uint8_t value of the month
  */
 uint8_t GNSS_easyC::getMonth()
@@ -87,7 +87,7 @@ uint8_t GNSS_easyC::getMonth()
 
 /**
  * @brief                   Get the last measured day by the GPS module
- * 
+ *
  * @returns                 uint8_t value of the day
  */
 uint8_t GNSS_easyC::getDay()
@@ -102,7 +102,7 @@ uint8_t GNSS_easyC::getDay()
 
 /**
  * @brief                   Get the last measured hour by the GPS module
- * 
+ *
  * @returns                 uint8_t value of the hour
  */
 uint8_t GNSS_easyC::getHour()
@@ -117,7 +117,7 @@ uint8_t GNSS_easyC::getHour()
 
 /**
  * @brief                   Get the last measured minute (in current hour) by the GPS module
- * 
+ *
  * @returns                 uint8_t value of the minute
  */
 uint8_t GNSS_easyC::getMinute()
@@ -132,7 +132,7 @@ uint8_t GNSS_easyC::getMinute()
 
 /**
  * @brief                   Get the last measured seconds (in current minute) by the GPS module
- * 
+ *
  * @returns                 float value of the seconds
  */
 uint8_t GNSS_easyC::getSeconds()
@@ -147,7 +147,7 @@ uint8_t GNSS_easyC::getSeconds()
 
 /**
  * @brief                   Get the last measured speed by the GPS module
- * 
+ *
  * @returns                 float value of the speed
  */
 float GNSS_easyC::getSpeed()
@@ -161,7 +161,7 @@ float GNSS_easyC::getSpeed()
 
 /**
  * @brief                   Get the last measured altitude by the GPS module
- * 
+ *
  * @returns                 float value of the altitude
  */
 float GNSS_easyC::getAltitude()
