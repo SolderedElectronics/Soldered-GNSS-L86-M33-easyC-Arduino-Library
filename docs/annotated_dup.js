@@ -1,5 +1,5 @@
 var annotated_dup =
 [
     [ "EasyC", "class_easy_c.html", "class_easy_c" ],
-    [ "Sensor", "class_sensor.html", "class_sensor" ]
+    [ "GNSS_easyC", "class_g_n_s_s__easy_c.html", "class_g_n_s_s__easy_c" ]
 ];
