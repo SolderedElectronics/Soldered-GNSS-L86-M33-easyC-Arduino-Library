@@ -3,11 +3,10 @@
  *
  * @file        L86_M33_easyC_Basic_Readings.ino
  * @brief       This code will try to read GNSS Latitude, Longitude, Time, Date, Speed and Altitude and display it on
- *the Serial monitor at 115200 baud. To successfuly run the sketch, connect a GPS antenna to the GNSS module, connect
- *GNSS module to one of the Dasduino boards via easyC, upload the code and open the serial monitor at 115200 bauds to
- *see the data.
+ *the Serial monitor at 115200 baud. To successfuly run the sketch, connect the GNSS module to one of the Dasduino
+ *boards via easyC, upload the code and open the serial monitor at 115200 bauds to see the data.
  *
- *              For best results, GPS antenna must be outside!
+ *              For best results, connect a GPS antenna!
  *
  *              Soldered L86-M33 GNSS easyC Breakout: www.solde.red/333213
  *              Dasduino Core: www.solde.red/333037
@@ -23,7 +22,19 @@
 // Create the GNSS_easyC object
 GNSS_easyC gnss;
 
-// Note that the first couple of readings won't be correct as the L86 takes a couple seconds to set up.
+// The default I2C address is 0x30
+// You may change the address via the switches on the front of the board
+// In this table, 'x' represents a switch toggled 'UP'
+// Note that on the physical switches 1 and 3 are swapped
+// Address | 3 | 2 | 1 |
+// 0x30    |   |   |   |
+// 0x31    |   |   | x |
+// 0x32    |   | x |   |
+// 0x33    |   | x | x |
+// 0x34    | x |   |   |
+// 0x35    | x |   | x |
+// 0x36    | x | x |   |
+// 0x37    | x | x | x |
 
 void setup()
 {
@@ -31,7 +42,16 @@ void setup()
     Serial.begin(115200);
 
     // Initialize GNSS_easyC
-    gnss.begin();
+    if (!gnss.begin())
+    {
+        Serial.println("GNSS not found!");
+        while (true)
+        {
+            delay(100);
+        }
+    }
+
+    Serial.println("GNSS initialized!");
 
     // -Set AlwaysLocateTM mode on
     gnss.setAlwaysLocate(true);
@@ -43,7 +63,7 @@ void setup()
 void loop()
 {
     // Wait while the GNSS module has not yet read any useful data
-    while(!gnss.GNSSAvailable())
+    while (!gnss.GNSSAvailable())
     {
         delay(1);
     }

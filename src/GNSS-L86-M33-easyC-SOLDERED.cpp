@@ -180,24 +180,26 @@ float GNSS_easyC::getAltitude()
  */
 bool GNSS_easyC::GNSSAvailable()
 {
-    char buf [1];
+    char buf[1];
     sendAddress(IS_AVAILABLE);
     readData(buf, 1);
-    if(buf[0] == '1') return true;
-    else return false;
+    if (buf[0] == '1')
+        return true;
+    else
+        return false;
 }
 
 /**
  * @brief                   Turn Multi Tone AIC (Active Interference Cancellation) on or off
- * 
+ *
  * @param                   _b True if it's to be turned on, false to turn off
  *
  * @returns                 None
  */
 void GNSS_easyC::setMultiToneAIC(bool _b)
 {
-    char buf [1];
-    if(_b)
+    char buf[1];
+    if (_b)
     {
         sendAddress(MULTI_TONE_AIC);
     }
@@ -205,18 +207,17 @@ void GNSS_easyC::setMultiToneAIC(bool _b)
     {
         sendAddress(MULTI_TONE_AIC);
     }
-    
 }
 
 /**
  * @brief                   Turn AlwaysLocateTM mode on or off
- * 
+ *
  * @param                   _b True if it's to be turned on, false to turn off
  *
  * @returns                 None
  */
 void GNSS_easyC::setAlwaysLocate(bool _b)
 {
-    char buf [1];
+    char buf[1];
     sendAddress(ALWAYS_LOCATE);
 }
