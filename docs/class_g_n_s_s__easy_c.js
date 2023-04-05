@@ -11,5 +11,8 @@ var class_g_n_s_s__easy_c =
     [ "getSeconds", "class_g_n_s_s__easy_c.html#af07b02388ab3445558850355b91d000c", null ],
     [ "getSpeed", "class_g_n_s_s__easy_c.html#a1e40e3bd0aa11b6d180f2fb0cef0560e", null ],
     [ "getYear", "class_g_n_s_s__easy_c.html#a1f6a8c71779e40a6163e4551f536e3ab", null ],
-    [ "initializeNative", "class_g_n_s_s__easy_c.html#a5685badc201edbfa7d979404977e4047", null ]
+    [ "GNSSAvailable", "class_g_n_s_s__easy_c.html#acf2f278afb51437bf62c0119e57c08a5", null ],
+    [ "initializeNative", "class_g_n_s_s__easy_c.html#a5685badc201edbfa7d979404977e4047", null ],
+    [ "setAlwaysLocate", "class_g_n_s_s__easy_c.html#a1130917a3ea097b5988b4702d7754bb6", null ],
+    [ "setMultiToneAIC", "class_g_n_s_s__easy_c.html#a55c35d06cb8bc95fdac4dc6614e2ec0f", null ]
 ];

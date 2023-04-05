@@ -14,5 +14,6 @@ var searchData=
   ['gnss_2dl86_2dm33_2deasyc_2dsoldered_2ecpp_11',['GNSS-L86-M33-easyC-SOLDERED.cpp',['../_g_n_s_s-_l86-_m33-easy_c-_s_o_l_d_e_r_e_d_8cpp.html',1,'']]],
   ['gnss_2dl86_2dm33_2deasyc_2dsoldered_2eh_12',['GNSS-L86-M33-easyC-SOLDERED.h',['../_g_n_s_s-_l86-_m33-easy_c-_s_o_l_d_e_r_e_d_8h.html',1,'']]],
   ['gnss_5fdata_5fselect_13',['GNSS_DATA_SELECT',['../_g_n_s_s-_l86-_m33-easy_c-_s_o_l_d_e_r_e_d_8h.html#a0f6b6e9ad4cd9f764924985b64cd92f1',1,'GNSS-L86-M33-easyC-SOLDERED.h']]],
-  ['gnss_5feasyc_14',['GNSS_easyC',['../class_g_n_s_s__easy_c.html',1,'GNSS_easyC'],['../class_g_n_s_s__easy_c.html#adf8d65934c193d28243944f677b81527',1,'GNSS_easyC::GNSS_easyC()']]]
+  ['gnss_5feasyc_14',['GNSS_easyC',['../class_g_n_s_s__easy_c.html#adf8d65934c193d28243944f677b81527',1,'GNSS_easyC::GNSS_easyC()'],['../class_g_n_s_s__easy_c.html',1,'GNSS_easyC']]],
+  ['gnssavailable_15',['GNSSAvailable',['../class_g_n_s_s__easy_c.html#acf2f278afb51437bf62c0119e57c08a5',1,'GNSS_easyC']]]
 ];

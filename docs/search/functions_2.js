@@ -10,5 +10,6 @@ var searchData=
   ['getseconds_7',['getSeconds',['../class_g_n_s_s__easy_c.html#af07b02388ab3445558850355b91d000c',1,'GNSS_easyC']]],
   ['getspeed_8',['getSpeed',['../class_g_n_s_s__easy_c.html#a1e40e3bd0aa11b6d180f2fb0cef0560e',1,'GNSS_easyC']]],
   ['getyear_9',['getYear',['../class_g_n_s_s__easy_c.html#a1f6a8c71779e40a6163e4551f536e3ab',1,'GNSS_easyC']]],
-  ['gnss_5feasyc_10',['GNSS_easyC',['../class_g_n_s_s__easy_c.html#adf8d65934c193d28243944f677b81527',1,'GNSS_easyC']]]
+  ['gnss_5feasyc_10',['GNSS_easyC',['../class_g_n_s_s__easy_c.html#adf8d65934c193d28243944f677b81527',1,'GNSS_easyC']]],
+  ['gnssavailable_11',['GNSSAvailable',['../class_g_n_s_s__easy_c.html#acf2f278afb51437bf62c0119e57c08a5',1,'GNSS_easyC']]]
 ];
