@@ -33,13 +33,20 @@ public:
     /**
      * @brief       Initializes sensors on native or easyC on default address
      */
-    void begin()
+    bool begin()
     {
         if (native)
             initializeNative();
         else
             begin(defaultAddress);
         beginDone = 1;
+
+        // Make sure we can communicate to GNSS
+        char buf [1];
+        this->sendAddress(-1);
+        this->readData(buf, 1);
+        if(buf[0] == '1') return true;
+        else return false;
     }
 
     /**
@@ -47,13 +54,20 @@ public:
      *
      * @param uint8_t _address Custom easyC sensor address
      */
-    void begin(uint8_t _address)
+    bool begin(uint8_t _address)
     {
         address = _address;
 
         Wire.begin();
 
         beginDone = 1;
+
+        // Make sure we can communicate to GNSS
+        char buf [1];
+        this->sendAddress(-1);
+        this->readData(buf, 1);
+        if(buf[0] == '1') return true;
+        else return false;
     }
 
     int native = 0;
