@@ -26,6 +26,9 @@ enum GNSS_DATA_SELECT
     SECOND_CENTISECOND = 5,
     SPEED = 6,
     ALTITUDE = 7,
+    IS_AVAILABLE = 8,
+    ALWAYS_LOCATE = 9,
+    MULTI_TONE_AIC = 10,
 };
 
 class GNSS_easyC : public EasyC
@@ -42,6 +45,10 @@ class GNSS_easyC : public EasyC
     uint8_t getSeconds();
     float getSpeed();
     float getAltitude();
+    bool GNSSAvailable();
+    void setMultiToneAIC(bool _b);
+    void setAlwaysLocate(bool _b);
+
 
   protected:
     void initializeNative();

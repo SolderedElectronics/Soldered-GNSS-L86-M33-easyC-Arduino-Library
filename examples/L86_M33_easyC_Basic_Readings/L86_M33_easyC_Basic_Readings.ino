@@ -32,10 +32,22 @@ void setup()
 
     // Initialize GNSS_easyC
     gnss.begin();
+
+    // -Set AlwaysLocateTM mode on
+    gnss.setAlwaysLocate(true);
+
+    // Set MultiToneAIC mode on
+    gnss.setMultiToneAIC(true);
 }
 
 void loop()
 {
+    // Wait while the GNSS module has not yet read any useful data
+    while(!gnss.GNSSAvailable())
+    {
+        delay(1);
+    }
+
     // Get all available data
     // Note the data types
     float lat = gnss.getLatitude();
@@ -49,23 +61,27 @@ void loop()
     float speed = gnss.getSpeed();
     float altitude = gnss.getAltitude();
 
-    // Print all the data
+    // Print location data
     Serial.print("Latitude: ");
     Serial.println(lat, 6);
     Serial.print("Longitude: ");
     Serial.println(lng, 6);
-    Serial.print("Year: ");
+
+    // Print time
+    char timeBuf[10];
+    sprintf(timeBuf, "%02d:%02d:%02d", hour, minute, seconds);
+    Serial.print("Time: ");
+    Serial.println(timeBuf);
+
+    // Print date
+    Serial.print("Date: ");
+    Serial.print(day);
+    Serial.print("/");
+    Serial.print(month);
+    Serial.print("/");
     Serial.println(year);
-    Serial.print("Month: ");
-    Serial.println(month);
-    Serial.print("Day: ");
-    Serial.println(day);
-    Serial.print("Hour: ");
-    Serial.println(hour);
-    Serial.print("Minute: ");
-    Serial.println(minute);
-    Serial.print("Seconds: ");
-    Serial.println(seconds);
+
+    // Print other data
     Serial.print("Speed: ");
     Serial.print(speed, 6);
     Serial.println(" km/h");
@@ -75,5 +91,5 @@ void loop()
 
     // Pprint a newline and wait a bit before the next output
     Serial.println(" ");
-    delay(3000);
+    delay(1000);
 }
